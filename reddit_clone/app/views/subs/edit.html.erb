@@ -1,0 +1,16 @@
+<h1>Change Sub</h1>
+
+<form action="<%= sub_url(@sub) %>" method="POST" > 
+    <input type="hidden" name="_method" value="PATCH">
+    
+    <label for="title">Title: 
+        <input type="text" id="title" name="sub[title]" value="<%= @sub.title %>"> 
+    </label>
+    <br>
+    <label for="description">Description: 
+        <textarea  id="description" name="sub[description]" value="<%= @sub.description %>"> 
+    </label>
+    <br>
+    <input type="submit" value="Update">
+
+</form>
